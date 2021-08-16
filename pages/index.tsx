@@ -13,6 +13,7 @@ import CallToAction from '../components/cta';
 import Hero from '../components/hero';
 import Layout, { siteDescription, siteTitle } from '../components/layout';
 import ProductCard from '../components/productCard';
+import ContactUsCard from '../components/contactUsCard';
 
 const features: {
   title: string;
@@ -164,12 +165,13 @@ export default function Home(): JSX.Element {
                 systems have a soft data transfer limit of 500GB.
               </p>
             </div>
-            <div className="grid mx-auto justify-center gap-10 grid-cols-1 md:grid-cols-4">
+            <div className="grid mx-auto justify-center gap-10 grid-cols-1 md:grid-cols-5 items-stretch">
               {plans.map((_, i) => (
                 <div key={i.toString()}>
                   <ProductCard tier={i} />
                 </div>
               ))}
+              <ContactUsCard />
             </div>
           </div>
         </div>
